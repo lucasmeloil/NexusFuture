@@ -1,5 +1,5 @@
 import React from 'react';
-import { HistoryIcon } from './icons';
+import { HistoryIcon3D } from './icons3D';
 
 interface ImageHistoryProps {
     history: string[];
@@ -11,7 +11,7 @@ export const ImageHistory: React.FC<ImageHistoryProps> = ({ history, onSelectIma
         <section id="history-section" className="py-16 bg-gray-800/50 min-h-[250px] flex items-center">
             <div className="container mx-auto px-4">
                 <div className="flex items-center gap-3 mb-8">
-                    <HistoryIcon className="h-8 w-8 text-indigo-400" />
+                    <HistoryIcon3D className="h-10 w-10 text-indigo-400" />
                     <h2 className="text-3xl font-bold">Seu Histórico</h2>
                 </div>
                 {history.length === 0 ? (

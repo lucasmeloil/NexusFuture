@@ -1,6 +1,7 @@
 
+
 import React, { useRef, useCallback } from 'react';
-import { UploadIcon } from './icons';
+import { UploadIcon3D } from './icons3D';
 
 interface ImageInputProps {
     onImageUpload: (file: File) => void;
@@ -48,7 +49,7 @@ export const ImageInput: React.FC<ImageInputProps> = ({ onImageUpload, imageUrl 
                         onDrop={handleDrop}
                         onDragOver={handleDragOver}
                     >
-                        <UploadIcon className="h-12 w-12 text-gray-500 group-hover:text-indigo-400 transition-colors" />
+                        <UploadIcon3D className="h-20 w-20 text-gray-500 group-hover:text-indigo-400 transition-colors" />
                         <p className="mt-2 text-gray-400">
                             <span className="font-semibold text-indigo-400">Click to upload</span> or drag and drop
                         </p>

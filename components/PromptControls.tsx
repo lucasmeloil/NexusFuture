@@ -1,5 +1,5 @@
 import React from 'react';
-import { WandIcon, RefreshIcon } from './icons';
+import { WandIcon3D, RefreshIcon3D } from './icons3D';
 
 interface PromptControlsProps {
     prompt: string;
@@ -38,7 +38,7 @@ export const PromptControls: React.FC<PromptControlsProps> = ({ prompt, setPromp
                         className="bg-gray-700 text-gray-300 font-bold py-3 px-4 rounded-md hover:bg-gray-600 disabled:bg-gray-700/50 disabled:text-gray-500 disabled:cursor-not-allowed transition-all flex items-center gap-2"
                         aria-label="Start new edit"
                     >
-                        <RefreshIcon className="h-5 w-5" />
+                        <RefreshIcon3D className="h-5 w-5" />
                         <span className="hidden sm:inline">Nova Edição</span>
                     </button>
                     <button
@@ -46,7 +46,7 @@ export const PromptControls: React.FC<PromptControlsProps> = ({ prompt, setPromp
                         disabled={isButtonDisabled}
                         className="bg-indigo-600 text-white font-bold py-3 px-4 rounded-md hover:bg-indigo-500 disabled:bg-indigo-600/50 disabled:cursor-not-allowed transition-all flex items-center gap-2 flex-grow sm:flex-grow-0 justify-center"
                     >
-                        <WandIcon className="h-5 w-5" />
+                        <WandIcon3D className="h-5 w-5" />
                         <span>{isLoading ? 'Gerando...' : 'Gerar'}</span>
                     </button>
                 </div>

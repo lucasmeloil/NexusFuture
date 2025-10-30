@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Logo } from './Logo';
-import { MenuIcon, XIcon } from './icons';
+import { MenuIcon, XIcon } from './icons3D';
 
 interface HeaderProps {
     activeSection: string;

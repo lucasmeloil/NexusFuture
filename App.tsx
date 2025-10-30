@@ -5,7 +5,7 @@ import { ImageOutput } from './components/ImageOutput';
 import { PromptControls } from './components/PromptControls';
 import { ImageHistory } from './components/ImageHistory';
 import { editImage } from './services/geminiService';
-import { UploadIcon, TypeIcon, WandIcon, CropIcon, ImageIcon, SparklesIcon } from './components/icons';
+import { UploadIcon3D, TypeIcon3D, WandIcon3D, CropIcon3D, ImageIcon3D, SparklesIcon3D, NexusSoftTechIcon, InstagramIcon } from './components/icons3D';
 import { Logo } from './components/Logo';
 import { dataUrlToFile, useActiveSection } from './utils/fileUtils';
 import { MobileNav } from './components/MobileNav';
@@ -121,22 +121,22 @@ const App: React.FC = () => {
                     <p className="text-gray-400 mb-12">O processo é fácil e intuitivo.</p>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
                         <div className="flex flex-col items-center">
-                            <div className="bg-gray-700/50 p-6 rounded-full mb-4">
-                                <UploadIcon className="h-10 w-10 text-indigo-400" />
+                            <div className="p-4 rounded-full mb-4">
+                                <UploadIcon3D className="h-20 w-20" />
                             </div>
                             <h3 className="text-xl font-semibold mb-2">1. Envie sua Imagem</h3>
                             <p className="text-gray-400">Faça o upload ou arraste e solte a imagem que você deseja editar.</p>
                         </div>
                         <div className="flex flex-col items-center">
-                           <div className="bg-gray-700/50 p-6 rounded-full mb-4">
-                                <TypeIcon className="h-10 w-10 text-indigo-400" />
+                           <div className="p-4 rounded-full mb-4">
+                                <TypeIcon3D className="h-20 w-20" />
                             </div>
                             <h3 className="text-xl font-semibold mb-2">2. Descreva a Edição</h3>
                             <p className="text-gray-400">Escreva em linguagem natural o que você quer mudar ou adicionar.</p>
                         </div>
                         <div className="flex flex-col items-center">
-                            <div className="bg-gray-700/50 p-6 rounded-full mb-4">
-                                <WandIcon className="h-10 w-10 text-indigo-400" />
+                            <div className="p-4 rounded-full mb-4">
+                                <WandIcon3D className="h-20 w-20" />
                             </div>
                             <h3 className="text-xl font-semibold mb-2">3. Gere a Mágica</h3>
                             <p className="text-gray-400">Nossa IA processa seu pedido e entrega a imagem editada em instantes.</p>
@@ -177,18 +177,18 @@ const App: React.FC = () => {
                     <h2 className="text-3xl font-bold mb-2">Infinitas Possibilidades</h2>
                     <p className="text-gray-400 mb-12">Explore novas funcionalidades para expandir sua criatividade.</p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
-                        <div className="bg-gray-800/50 p-6 rounded-lg text-left">
-                            <CropIcon className="h-8 w-8 text-indigo-400 mb-3" />
+                        <div className="bg-gray-800/50 p-6 rounded-lg text-left flex flex-col items-center sm:items-start text-center sm:text-left">
+                            <CropIcon3D className="h-14 w-14 mb-3" />
                             <h3 className="font-semibold text-lg">Formatos Sociais</h3>
                             <p className="text-gray-400 text-sm">Gere imagens nos formatos ideais para post, story ou paisagem com um clique.</p>
                         </div>
-                        <div className="bg-gray-800/50 p-6 rounded-lg text-left">
-                            <ImageIcon className="h-8 w-8 text-indigo-400 mb-3" />
+                        <div className="bg-gray-800/50 p-6 rounded-lg text-left flex flex-col items-center sm:items-start text-center sm:text-left">
+                            <ImageIcon3D className="h-14 w-14 mb-3" />
                             <h3 className="font-semibold text-lg">Gere do Zero</h3>
                             <p className="text-gray-400 text-sm">Não tem uma imagem? Descreva sua ideia e deixe a IA criar uma arte original para você.</p>
                         </div>
-                        <div className="bg-gray-800/50 p-6 rounded-lg text-left">
-                            <SparklesIcon className="h-8 w-8 text-indigo-400 mb-3" />
+                        <div className="bg-gray-800/50 p-6 rounded-lg text-left flex flex-col items-center sm:items-start text-center sm:text-left">
+                            <SparklesIcon3D className="h-14 w-14 mb-3" />
                             <h3 className="font-semibold text-lg">Estilos Prontos</h3>
                             <p className="text-gray-400 text-sm">Aplique estilos como "cinemático", "vintage" ou "fantasia" com prompts simples.</p>
                         </div>
@@ -196,22 +196,50 @@ const App: React.FC = () => {
                 </div>
             </section>
 
-             <footer className="bg-gray-800/50 border-t border-gray-700/50 py-8">
-                <div className="container mx-auto px-4 text-center text-gray-400 flex flex-col items-center gap-4">
-                    <Logo className="h-10" />
-                     <p>
-                        Sistema criado por Lucas Melo, CEO da{' '}
-                        <a href="https://www.nexussofttech.com.br" target="_blank" rel="noopener noreferrer" className="text-indigo-400 hover:underline">
-                            Nexus Soft Tech
-                        </a>
-                        .
-                    </p>
-                    <p>
-                         <a href="https://www.instagram.com/nexusofttech" target="_blank" rel="noopener noreferrer" className="text-indigo-400 hover:underline">
-                            @nexusofttech
-                        </a>
-                    </p>
-                    <p>&copy; {new Date().getFullYear()} NEXUS FUTURE. Acelere sua criatividade.</p>
+             <footer className="bg-gray-800/50 border-t border-gray-700/50">
+                <div className="container mx-auto px-6 py-12">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        {/* Column 1: Logo and Copyright */}
+                        <div className="flex flex-col items-center md:items-start text-center md:text-left">
+                            <Logo className="h-10 mb-4" />
+                            <p className="text-gray-400 max-w-xs">
+                                Acelere sua criatividade com o poder da Inteligência Artificial.
+                            </p>
+                             <p className="text-sm text-gray-500 mt-6">
+                                &copy; {new Date().getFullYear()} NEXUS FUTURE. Todos os direitos reservados.
+                            </p>
+                        </div>
+
+                        {/* Column 2: Navigation */}
+                        <div className="text-center md:text-left">
+                            <h3 className="font-semibold text-white tracking-wider uppercase mb-4">Navegação</h3>
+                            <ul className="space-y-2">
+                                <li><a href="#how-it-works" className="text-gray-400 hover:text-indigo-400 transition-colors">Como Funciona</a></li>
+                                <li><a href="#features" className="text-gray-400 hover:text-indigo-400 transition-colors">Recursos</a></li>
+                                <li><a href="#history-section" className="text-gray-400 hover:text-indigo-400 transition-colors">Histórico</a></li>
+                                 <li><a href="#editor" className="text-gray-400 hover:text-indigo-400 transition-colors">Editor</a></li>
+                            </ul>
+                        </div>
+
+                        {/* Column 3: Social and Contact */}
+                        <div className="text-center md:text-left">
+                             <h3 className="font-semibold text-white tracking-wider uppercase mb-4">Desenvolvido por</h3>
+                             <ul className="space-y-3">
+                                <li className="flex items-center justify-center md:justify-start gap-3">
+                                    <NexusSoftTechIcon className="h-6 w-6" />
+                                    <a href="https://www.nexussofttech.com.br" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-indigo-400 transition-colors">
+                                        Nexus Soft Tech
+                                    </a>
+                                </li>
+                                <li className="flex items-center justify-center md:justify-start gap-3">
+                                    <InstagramIcon className="h-6 w-6" />
+                                    <a href="https://www.instagram.com/nexusofttech" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-indigo-400 transition-colors">
+                                        @nexusofttech
+                                    </a>
+                                </li>
+                             </ul>
+                        </div>
+                    </div>
                 </div>
             </footer>
             <MobileNav activeSection={activeSection} />

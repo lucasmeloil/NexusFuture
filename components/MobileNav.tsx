@@ -1,5 +1,5 @@
 import React from 'react';
-import { WandIcon, HistoryIcon, SparklesIcon } from './icons';
+import { WandIcon3D, HistoryIcon3D, SparklesIcon3D } from './icons3D';
 
 interface MobileNavProps {
     activeSection: string;
@@ -13,9 +13,9 @@ export const MobileNav: React.FC<MobileNavProps> = ({ activeSection }) => {
     };
 
     const navLinks = [
-        { href: '#editor', label: 'Criar', icon: WandIcon, id: 'editor' },
-        { href: '#history-section', label: 'Histórico', icon: HistoryIcon, id: 'history-section' },
-        { href: '#features', label: 'Recursos', icon: SparklesIcon, id: 'features' }
+        { href: '#editor', label: 'Criar', icon: WandIcon3D, id: 'editor' },
+        { href: '#history-section', label: 'Histórico', icon: HistoryIcon3D, id: 'history-section' },
+        { href: '#features', label: 'Recursos', icon: SparklesIcon3D, id: 'features' }
     ];
 
     return (
