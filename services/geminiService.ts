@@ -79,7 +79,8 @@ export const editImage = async (imageFile: File, prompt: string): Promise<string
                 errorMessage = "The request was blocked due to the model's recitation policy. Please rephrase your prompt.";
                 break;
                 
-            case 'IMAGE_OTHER':
+            // Fix: 'IMAGE_OTHER' is not a valid FinishReason. Changed to 'OTHER' which is the correct value for general errors.
+            case 'OTHER':
                 errorMessage = "Image generation failed for a general reason. This can sometimes be fixed by rephrasing your prompt, using a different starting image, or simply trying again.";
                 break;
 
