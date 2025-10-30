@@ -14,7 +14,24 @@ View your app in AI Studio: https://ai.studio/apps/drive/17lntclouXEQVsW95VJWPJ7
 
 
 1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+   ```bash
+   npm install
+   ```
+
+2. Create a `.env.local` file and set your Gemini API key:
+   ```bash
+   VITE_GEMINI_API_KEY=your_api_key_here
+   ```
+
 3. Run the app:
-   `npm run dev`
+   ```bash
+   npm run dev
+   ```
+
+## Deploy to Netlify
+
+The project is configured to deploy to Netlify automatically.
+
+1. Set the environment variable `VITE_GEMINI_API_KEY` in your Netlify site settings
+2. Push your changes to the repository
+3. Netlify will automatically build and deploy your site
