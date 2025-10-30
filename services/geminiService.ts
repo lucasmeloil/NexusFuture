@@ -1,8 +1,7 @@
 import { GoogleGenAI, Modality, GenerateContentResponse } from "@google/genai";
 import { fileToBase64 } from "../utils/fileUtils";
 
-// Fix: Resolved "Property 'env' does not exist on type 'ImportMeta'" error by using `process.env.API_KEY` as specified in the coding guidelines.
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY });
 
 export const editImage = async (imageFile: File, prompt: string): Promise<string> => {
     try {
